@@ -2,7 +2,7 @@
 library identifier: 'cicdjenkins@master', retriever: modernSCM(
     [$class: 'GitSCMSource',
     remote: 'git@github.com:Anjan-Kumar/AWSLambda-Nodejs.git',
-    credentialsId: '6327e8a3-b51d-44e6-a900-50965cfa5591']
+    credentialsId: 'github-anjankumar']
 )
 
 /*
