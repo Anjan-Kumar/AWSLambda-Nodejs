@@ -1,5 +1,5 @@
 //Added shared Library
-library identifier: 'AwsLambda-Nodejs@master', retriever: modernSCM(
+library identifier: 'AWSLambda-Nodejs@master', retriever: modernSCM(
     [$class: 'GitSCMSource',
     remote: 'https://github.com/Anjan-Kumar/AWSLambda-Nodejs.git',
     credentialsId: 'github-anjankumar']
