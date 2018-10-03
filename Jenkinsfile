@@ -72,7 +72,7 @@ pipeline {
 }
 
 def trigger_build(ENVIRONMENT, BUILD_NUMBER){
-    build(job: "lambda-cicd-deploy",
+    build(job: "MyBuild-deploy",
         parameters:
         [string(name: 'ENVIRONMENT', value: ENVIRONMENT),
          string(name: 'BUILD_NUMBER', value: BUILD_NUMBER)],
