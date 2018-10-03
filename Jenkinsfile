@@ -1,7 +1,7 @@
 //Added shared Library
 library identifier: 'cicdjenkins@master', retriever: modernSCM(
     [$class: 'GitSCMSource',
-    remote: 'git@github.com:Anjan-Kumar/AWSLambda-Nodejs.git',
+    remote: 'https://github.com/Anjan-Kumar/AWSLambda-Nodejs.git',
     credentialsId: 'github-anjankumar']
 )
 
