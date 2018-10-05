@@ -19,7 +19,6 @@ pipeline {
         */
         stage('General') {
             steps {
-                githubstatus('STARTED')
                 echo sh(script: 'env|sort', returnStdout: true)
             }
         }
