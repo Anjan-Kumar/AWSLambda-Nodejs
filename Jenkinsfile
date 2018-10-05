@@ -44,7 +44,7 @@ pipeline {
                     //zip of code
 					sh '''#!/bin/bash
                             rm -f lambda_cicd.zip
-                            zip -r lambda_cicd.zip . -x Jenkins*
+                            zip -r lambda_cicd.zip . -x Jenkins* -x "*.git*"
                     '''
 
                 }
@@ -59,8 +59,8 @@ pipeline {
     post {
         always {
             //add short text
-            addShortText(text: "${GIT_BRANCH}", background: 'yellow', border: 1);
-            addShortText(text: "${NODE_NAME}", background: 'cyan', border: 1) ;
+            //addShortText(text: "${GIT_BRANCH}", background: 'yellow', border: 1);
+            //addShortText(text: "${NODE_NAME}", background: 'cyan', border: 1) ;
 
             //Added Triggerbuild
             //trigger_build("${ENVIRONMENT}", BUILD_NUMBER)
