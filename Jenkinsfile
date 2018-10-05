@@ -45,7 +45,7 @@ pipeline {
                     //zip of code
 					sh '''#!/bin/bash
                             rm -f lambda_cicd.zip
-                            zip -r lambda_cicd.zip . -x Jenkins* -x '\*.git\*'
+                            zip -r lambda_cicd.zip . -x Jenkins* -x "*.git*"
                     '''
 
                 }
