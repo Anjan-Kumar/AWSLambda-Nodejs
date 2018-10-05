@@ -1,13 +1,6 @@
-//Added shared Library
-library identifier: 'AWSLambda-Nodejs@master', retriever: modernSCM(
-    [$class: 'GitSCMSource',
-    remote: 'https://github.com/Anjan-Kumar/AWSLambda-Nodejs.git',
-    credentialsId: 'github-anjankumar']
-)
-
 /*
 FileName : Jenkinsfile (Build)
-Purpouse : Usefull to Build Code & generate Image
+Purpouse : Usefull to Build Code & deploy to Lambda
 Description: 
 */
 def VERSION = 'latest'
@@ -50,6 +43,11 @@ pipeline {
                 script {
                     BUILD_NUMBER = BUILD_NUMBER+"-"+GIT_REVISION
                     //zip of code
+					sh '''#!/bin/bash
+                            rm -f lambda_cicd.zip
+                            zip -r lambda_cicd.zip . -x Jenkins* -x \*.git\*
+                    '''
+
                 }
                 
             }
