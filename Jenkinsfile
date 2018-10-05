@@ -52,20 +52,6 @@ pipeline {
             }
         }
     }
-    /*
-    Post Build Actions
-    Purpouse : Perform slack Notification,Generate Junit & Jacoco Reports & trigger Deploy job for related environment
-    */
-    post {
-        always {
-            //add short text
-            //addShortText(text: "${GIT_BRANCH}", background: 'yellow', border: 1);
-            //addShortText(text: "${NODE_NAME}", background: 'cyan', border: 1) ;
-
-            //Added Triggerbuild
-            //trigger_build("${ENVIRONMENT}", BUILD_NUMBER)
-        } 
-    }
 }
 
 def trigger_build(ENVIRONMENT, BUILD_NUMBER){
